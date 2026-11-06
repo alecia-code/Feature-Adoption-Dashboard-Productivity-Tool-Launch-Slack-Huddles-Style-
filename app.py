@@ -20,7 +20,7 @@ if segment:
     filtered = filtered[filtered["user_segment"].isin(segment)]
 if device:
     filtered = filtered[filtered["device_type"].isin(device)]
-if prompt:
+if len(prompt) > 0:
     filtered = filtered[filtered["in_app_prompt_shown"].isin(prompt)]
 
 # KPI cards
