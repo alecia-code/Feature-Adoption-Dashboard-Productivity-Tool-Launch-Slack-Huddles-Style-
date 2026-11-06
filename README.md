@@ -1,34 +1,30 @@
-# 🚀 Feature Adoption Dashboard – Productivity Tool Launch
+# Feature Adoption Dashboard Productivity Tool Launch Slack Huddles Style 
 
-This project simulates the launch and behavioral adoption of a new collaboration feature (like Slack’s Huddles) within a productivity tool. It models staged rollout exposure, in-app prompt impact, and post-feature behavior changes for 5,000 users.
+**Portfolio case study | Synthetic data | Python, pandas, Streamlit, Plotly**
 
-## 📊 Features
-- KPI Cards: Adoption Rate, Avg Days to Adoption, 7-Day Retention, Prompt CTR
-- Filters: User Segment, Device Type, Prompt Exposure
-- Visuals:
-  - Time-to-Adoption Distribution
-  - Feature Funnel (Exposed → Clicked → Used → Revisited)
-  - Retention Comparison (Prompt vs No Prompt)
-  - Post-Feature Behavioral Change
+## Business question
+Evaluate feature rollout, exposure-to-adoption funnel, prompt engagement, and retention.
 
-## 🧪 Use Cases
-- Evaluate staged rollouts and prompt effectiveness
-- Track cohort adoption trends and conversion
-- Identify product-qualified behaviors and long-term impact
+## Analyst approach
+1. Define the operational decision and measurable KPIs.
+2. Segment the simulated records using dashboard controls.
+3. Compare trends and flag exceptions for investigation.
+4. Check metric definitions and filter consistency before presenting findings.
 
-## 🛠 Tools Used
-- Python
-- Streamlit
-- Pandas
-- Plotly
+## Dashboard and metrics
+The Streamlit app provides interactive filters, KPI summaries, and charts. Run it locally to explore how the selected segments change the results. The data is **synthetic**: findings are demonstrations of analytical methods, not observed customer outcomes.
 
-## 🚀 How to Run
-1. Clone this repo
-2. Install requirements: `pip install -r requirements.txt`
-3. Run the app: `streamlit run app.py`
+## Quality assurance and interpretation
+Prompt CTR uses clicks among exposed users over exposed users. Funnel stages are counts of event flags; ensure events are nested before interpreting as strict funnel conversion. Retention comparisons are observational, not causal.
 
-## 📁 Files
-- `app.py`: Streamlit dashboard
-- `feature_adoption_rollout.csv`: Simulated dataset
-- `requirements.txt`: Project dependencies
-- `feature_case_study.docx`: Case study summary
+**Validation checklist:** confirm the dataset loads; verify KPI numerators/denominators against pandas calculations; test each filter alone and combined; check zero-row and zero-denominator selections; confirm every chart responds to the same filtered dataset; review charts for misleading causal claims.
+
+## Tools and reproduction
+```bash
+python -m pip install -r requirements.txt
+streamlit run app.py
+```
+The CSV in this repository is simulated sample data. The original case-study document is retained as a supplemental artifact; this README documents the current analytical approach.
+
+## What this demonstrates
+Business problem framing, KPI design, data exploration, operational reporting, dashboard development, and analytical QA. This is an independent portfolio exercise, not a client engagement or production deployment.
